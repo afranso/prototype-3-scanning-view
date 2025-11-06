@@ -28,3 +28,8 @@ func _physics_process(delta):
 		flashlight_time -= delta
 		if flashlight_time <= 0.0:
 			flashlight.visible = false
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		print("Found it")
