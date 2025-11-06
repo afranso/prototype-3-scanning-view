@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bakvn4fqlbkcs"]
+
+[ext_resource type="Texture2D" uid="uid://dkqbllh1ujoon" path="res://assets/dwight head.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bwmyo3yfr21i3" path="res://scripts/player.gd" id="1_dqkch"]
+[ext_resource type="Texture2D" uid="uid://b6ewjiwe2f5ak" path="res://assets/white circle.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://cssnqurtwc8eh" path="res://assets/white cone.png" id="3_dqkch"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_dqkch")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -3.000002)
+scale = Vector2(0.34130436, 0.3326087)
+texture = ExtResource("1_3vyb7")
+
+[node name="Circle Light" type="PointLight2D" parent="."]
+position = Vector2(-2.842171e-14, -0.99999994)
+scale = Vector2(0.20617814, 0.20499997)
+texture = ExtResource("2_qhqgy")
+
+[node name="Cone Light" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(94, 3)
+rotation = -1.5707964
+scale = Vector2(0.3773148, 0.3324958)
+texture = ExtResource("3_dqkch")
